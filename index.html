@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+ <html>
+
+ <head>
+     <title>Sélecteur de recettes</title>
+     <link rel="stylesheet" href="main.css">
+     <meta charset="utf-8" />
+     <link rel="shortcut icon" type="image/png" href="media/favicon.png">
+     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+ </head>
+
+ <body>
+     <script type="text/javascript" src="script.js"></script>
+     <script type="text/javascript" src="recipes.js"></script>
+     <header>
+         <h1>Sélecteur de recettes</h1>
+     </header>
+     <main>
+         <div id="ingredients">
+             <h2>Dans mon frigo j'ai :</h2>
+             <div>
+                 <input placeholder="Ingrédient..." onkeyup="updateDropdownList(this)" size="25">
+                 <div id="dropdownListIngredients">
+                     <!--<button onclick="addToActiveIngredients()">Ajouter</button>-->
+                     <template id="templateIngredientToAddToList">
+                         <p class="ingredientForInput" onclick="addToActiveIngredients(this)"></p>
+                     </template>
+                 </div>
+             </div>
+             <div id="listActiveIngredients">
+                 <template id="templateIngredientList">
+                     <div class="activeIngredient">
+                         <p></p><img src="media/closeArt.png" alt="close" onclick="removeFromActiveIngredients(this)">
+                     </div>
+                 </template>
+             </div>
+             <!-- <button id="saveIngredients" type="button">Sauvegarder</button>-->
+         </div>
+         <div id="recipesList">
+             <template id="templateRecipeItem">
+                 <div class="recipeInList">
+                     <img src="">
+                     <div class="hoverRecipeImage" onclick="openRecipePage(this)">
+                         <p></p>
+                     </div>
+                     <div class="replacementForRecipeImage"></div>
+                     <div class="missingIngredients"></div>
+                 </div>
+             </template>
+         </div>
+         <div id="recipePage">
+             <div id="recipeNameAndBackButton">
+                 <img id="backButton" src="media/backArrow.png" onclick="closeRecipePage()">
+                 <h2>Recipe Title</h2>
+             </div>
+             <div id="recipeContent">
+                 <div>
+                     <img id="recipeImageLarge" alt="image of the recipe">
+                     <div id="recipeIngredients">
+                         <div id="quantities">
+                             <img src="media/minusSign.png" alt="reduce quantities" onclick="minusOnePerson()">
+                             <input value="2" onkeyup="updateIngredientAmounts(this)">
+                             <img src="media/plusSign.png" alt="increase quantities" onclick="plusOnePerson()">
+                         </div>
+                         <template id="templateIngredient">
+                             <li>
+                                 <p></p>
+                                 <p></p>
+                                 <p></p>
+                             </li>
+                         </template>
+                         <ul></ul>
+                     </div>
+                 </div>
+                 <div id="recipeSteps">
+                     <ul></ul>
+                 </div>
+             </div>
+         </div>
+     </main>
+ </body>
+
+ </html>

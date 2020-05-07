@@ -1,0 +1,314 @@
+body {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+main {
+    /*width: 100vw;*/
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 2vh auto 3vh;
+    font-family: 'Playfair Display', serif;
+}
+
+/* INGREDIENTS SELECTION*/
+#ingredients {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    padding: 0 2vw 0 2vw;
+    border-right: 3px solid #333;
+    text-align: center;
+}
+
+#ingredients > button {
+    padding: 2vh;
+    border-radius: 1vh;
+    box-shadow: none;
+    margin-top: 2vh;
+}
+
+#ingredients input {
+    margin: 2vh 0 0;
+    background: url(media/searchButton.png) right center no-repeat;
+    background-size: contain;
+    padding: 1vh 2vh;
+    font-size: 1em;
+}
+
+#ingredients h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+}
+
+.ingredientForInput {
+    margin: 0 auto;
+    cursor: pointer;
+    height: 4vh;
+    line-height: 4vh;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+
+.ingredientForInput:hover {
+    background-color: lightgray;
+}
+
+#dropdownListIngredients {
+    max-height: 40vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: grey lightgrey;
+    max-width: 15vw;
+    margin: auto;
+}
+
+#dropdownListIngredients::-webkit-scrollbar {
+    width: 12px;
+}
+
+#dropdownListIngredients::-webkit-scrollbar-track {
+    background: lightgrey;
+}
+
+#dropdownListIngredients::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: grey;
+}
+
+#listActiveIngredients {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 20vw;
+    margin-top: 2vh;
+}
+
+.activeIngredient img {
+    width: 2vh;
+    height: 2vh;
+    display: inline-block;
+    margin: 1vh;
+    vertical-align: middle;
+}
+
+.activeIngredient p {
+    display: inline-block;
+    margin: 0;
+    margin-left: 1vw;
+    font-size: 1.1em;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.activeIngredient {
+    background: green;
+    white-space: nowrap;
+    border-radius: 0.6vw;
+    margin: 0 1vh 1vh 0;
+    display: flex;
+    align-items: center;
+}
+
+.activeIngredient.vegetable {
+    background-color: #50aa50;
+}
+
+.activeIngredient.fruit {
+    background-color: darkorange;
+}
+
+.activeIngredient.dairy {
+    background-color: #4fdef0;
+}
+
+.activeIngredient.starch {
+    background-color: #eedb41;
+}
+
+.activeIngredient.other {
+    background-color: lightslategray;
+}
+
+/* RECIPES LIST*/
+.recipeInList img {
+    width: 40vh;
+    height: 40vh;
+    position: absolute;
+    overflow: hidden;
+}
+
+.recipeInList {
+    margin: 0 0 5vh 5vh;
+    width: 40vh;
+}
+
+#recipesList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: start;
+}
+
+.missingIngredients {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: inherit;
+    margin-top: 0.5vh;
+}
+
+.missingIngredients > p {
+    border-radius: 1.3vh;
+    padding: 1vh 1vw;
+    margin: 0.1vh 0.5vh 0.1vh 0;
+    color: white;
+}
+
+.missingIngredients > p.missing {
+    background-color: #db3d0d;
+    order: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.missingIngredients > p.available {
+    background-color: rgba(13, 189, 13);
+    order: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hoverRecipeImage {
+    display: none;
+    text-align: center;
+    align-items: center;
+}
+
+.recipeInList:hover .hoverRecipeImage {
+    display: flex;
+    background-color: rgba(0.5, 0.5, 0.5, 0.5);
+    width: 40vh;
+    height: 40vh;
+    position: absolute;
+    cursor: pointer;
+}
+
+.hoverRecipeImage p {
+    color: white;
+    margin: auto;
+    font-size: 1.7em;
+    padding: 2vh;
+    line-height: 150%;
+    font-family: 'Playfair Display', serif;
+}
+
+.replacementForRecipeImage {
+    width: 40vh;
+    height: 40vh;
+}
+
+/*RECIPE PAGE*/
+
+#recipePage {
+    display: none;
+    flex-direction: column;
+}
+
+#backButton {
+    width: 3vh;
+    height: 3vh;
+    cursor: pointer;
+    margin-left: 3vw;
+}
+
+#recipePage h2 {
+    margin: 3vh auto;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
+}
+
+#recipeImageLarge {
+    width: 50vh;
+    height: 50vh;
+}
+
+#quantities img {
+    width: 4vh;
+    height: 3.5vh;
+    margin: 0;
+    cursor: pointer;
+}
+
+#quantities img + input {
+    width: 4vh;
+    height: 3.5vh;
+    text-align: center;
+    line-height: 3.5vh;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    border: none;
+    font-family: 'Playfair Display', serif;
+}
+
+#quantities {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    margin: 2vh auto;
+    width: 12vh;
+}
+
+#recipeIngredients {
+    border-right: 3px solid #333333;
+}
+
+#recipeIngredients ul {
+    list-style: none;
+    width: 30vw;
+    padding: 0;
+    margin: auto;
+    font-size: 1.3em;
+}
+
+#recipeIngredients li {
+    /*text-align: left;*/
+}
+
+#recipeIngredients ul p {
+    display: inline;
+    font-family: 'Playfair Display', serif;
+}
+
+#recipeContent {
+    display: flex;
+    text-align: center;
+}
+
+#recipeNameAndBackButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#recipeSteps {
+    text-indent: 1%;
+    width: 50%;
+}
+
+#recipeSteps > ul {
+    font-family: 'Montserrat', serif;
+    list-style: circle;
+    line-height: 200%;
+    text-align: left;
+}
