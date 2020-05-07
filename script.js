@@ -6,7 +6,7 @@ var listOfIngredients = [];
 function OnLoading() {
     makeArrayOfRecipes();
     createRecipeTiles();
-    getCookies();
+    document.querySelector("#dropdownListIngredients").style.display = "none";
 }
 
 function loadIngredientList() {
@@ -180,6 +180,9 @@ function closeRecipePage() {
 }
 
 function updateDropdownList(inputField) {
+    if(document.querySelector("#dropdownListIngredients").style.display == "none") {
+       document.querySelector("#dropdownListIngredients").style.display = "";
+    }
     var typedText = inputField.value.toUpperCase();
     var ingredientsDropdown = document.getElementById("dropdownListIngredients").querySelectorAll(".ingredientForInput");
     ingredientsDropdown.forEach(function (divDropdown) {
