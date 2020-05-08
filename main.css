@@ -312,3 +312,94 @@ h1 {
     line-height: 200%;
     text-align: left;
 }
+
+@media screen and (orientation:portrait) {
+    main {
+        display: block;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    #ingredients {
+        width: 100vw;
+        text-align: center;
+        border: none;
+    }
+
+    #ingredients h2 {
+        font-size: 3em;
+    }
+
+    #ingredients input {
+        font-size: 2em;
+    }
+
+    #dropdownListIngredients {
+        max-width: 60vw;
+        padding: 0;
+        margin: auto;
+    }
+
+    #dropdownListIngredients p {
+        width: 100%;
+        font-size: 2em;
+    }
+
+    #listActiveIngredients {
+        width: 80vw;
+        margin: auto;
+        margin-top: 2vh;
+    }
+
+    .activeIngredient {
+        border-radius: 2vw;
+    }
+
+    .activeIngredient p {
+        font-size: 2.2em;
+    }
+
+    .activeIngredient img {
+        width: 3vh;
+        height: 3vh;
+    }
+
+    .missingIngredients p {
+        font-size: 2em;
+        border-radius: 1vw;
+    }
+    
+    #recipeContent {
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    #recipeImageLarge {
+        width: 100vw;
+        height: 100vw;
+    }
+    
+    #quantities img+input {
+        font-size: 2em;
+    }
+    
+    #recipeIngredients {
+        border-right: none;
+        padding-bottom: 2vh;
+    }
+    
+    #recipeIngredients ul {
+        font-size: 2em;
+    }
+    
+    #recipeSteps {
+        width: 95%;
+    }
+    
+    #recipeSteps ul {
+        font-size: 1.5em;
+    }
+
+}

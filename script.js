@@ -6,7 +6,7 @@ var listOfIngredients = [];
 function OnLoading() {
     makeArrayOfRecipes();
     createRecipeTiles();
-    document.querySelector("#dropdownListIngredients").style.display = "none";
+    //document.querySelector("#dropdownListIngredients").style.display = "none";
 }
 
 function loadIngredientList() {
