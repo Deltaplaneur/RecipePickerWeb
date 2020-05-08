@@ -371,6 +371,14 @@ h1 {
         border-radius: 1vw;
     }
     
+    .recipeInList {
+        margin: 0 auto 5vh auto;    
+    }
+    
+    .hoverRecipeImage p {
+        font-size: 3em;
+    }
+    
     #recipeContent {
         flex-direction: column;
         overflow: hidden;
