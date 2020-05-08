@@ -538,4 +538,15 @@ function makeArrayOfRecipes() {
 "Pliez le bas puis la gauche et enfin la droite de la tortilla."],
         ingredients: [["Tortilla", 2, "", "starch"], ["Courgette", 1, "", "vegetable"], ["Poivron", 1, "", "vegetable"], ["Avocat", 1, "", "vegetable"], ["Fromage", 30, "g", "dairy"]]
     });
+    arrayOfRecipes.push({
+        title: "Céréales parfaites",
+        image: "media/recipePictures/Cereales.jpg",
+        steps: ["Placez les Weetabix dans un grand bol.",
+               "Recouvrez de corn flakes.",
+               "Ajoutez du muesli aggloméré.",
+               "Optionnellement, ajoutez des cacahuètes.",
+               "Versez une poignée de fruits rouges surgelés sur le dessus.",
+               "Remplissez avec du lait froid jusqu'à couvrir l'ensemble."],
+        ingredients: [["Corn Flakes", 50, "g", "starch"], ["Muesli", 50, "g", "starch"], ["Weetabix", 2, "", "starch"], ["Cacahuètes", 20, "g", "other"], ["Lait", 300, "mL", "dairy"], ["Fruits rouges surgelés", 30, "g", "fruit"]]
+    });
 }
