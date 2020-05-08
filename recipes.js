@@ -284,7 +284,7 @@ function makeArrayOfRecipes() {
 "Versez les œufs dans la poêle et faites cuire à feu doux en remuant continuellement pendant 5-6 minutes.",
 "Lorsque les œufs sont prêts, ajoutez la crème et le fromage frais et continuez à remuer pendant 1 minute.",
 "Retirez les œufs du feu.",
-"La recette du bouillon est celle du bouillon de légumes à l’œuf."],
+"La recette du bouillon est celle du <i>Bouillon de légumes à l’œuf</i>."],
         ingredients: [["Oeuf", 2, "", "other"], ["Crème", 5, "cL", "dairy"], ["Beurre", 10, "g", "dairy"], ["Fromage frais", 30, "g", "dairy"]]
     });
     arrayOfRecipes.push({
@@ -549,4 +549,17 @@ function makeArrayOfRecipes() {
                "Remplissez avec du lait froid jusqu'à couvrir l'ensemble."],
         ingredients: [["Corn Flakes", 50, "g", "starch"], ["Muesli", 50, "g", "starch"], ["Weetabix", 2, "", "starch"], ["Cacahuètes", 20, "g", "other"], ["Lait", 300, "mL", "dairy"], ["Fruits rouges surgelés", 30, "g", "fruit"]]
     });
+    arrayOfRecipes.push({
+        title: "Quesadillas aux champignons et sauce à l'oeuf",
+        image: "media/recipePictures/Quesadillas.jpg",
+        steps: ["Coupez votre mozzarella en rondelles et laissez reposer 15-30 minutes afin qu'elle rende de l'eau.",
+                "Lavez et coupez les champignons.",
+               "Faites-les revenir dans une poêle pendant 3-5 minutes avec un fond d'eau, ils doivent devenir plus foncés et réduire un peu.",
+               "Dans une tortilla, placez le fromage et les champignons sur une moitié en laissant une bordure vide. Repliez et applatissez un peu.",
+               "Faites cuire dans une poêle à feu moyen-chaud avec un peu de beurre ou d'huile. Vous devriez pouvoir en faire cuire 2 en même temps dans la poêle.",
+               "Après 2 minutes de cuisson, retournez les quesadillas et laissez cuire quelques minutes avant de retirer du feu.",
+               "La recette des oeufs crémeux est celle des <i>Oeufs crémeux et bouillon de légumes</i>."],
+        ingredients: [["Tortilla", 4, "", "starch"], ["Champignon", 8, "", "vegetable"], ["Oeuf", 2, "", "other"], ["Crème", 5, "cL", "dairy"], ["Mozzarella", 125, "g", "dairy"], ["Fromage râpé", 75, "g", "dairy"]]
+    });
+    
 }
