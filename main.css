@@ -188,12 +188,15 @@ h1 {
 }
 
 .hoverRecipeImage {
-    display: none;
+    opacity: 0.01;
+    display: flex;
     text-align: center;
     align-items: center;
+    position: absolute;
 }
 
 .recipeInList:hover .hoverRecipeImage {
+    opacity: 1;
     display: flex;
     background-color: rgba(0.5, 0.5, 0.5, 0.5);
     width: 40vh;

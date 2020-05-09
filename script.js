@@ -132,18 +132,6 @@ function updateIngredients(ingredient, add) {
         ingredientText.innerHTML = ingredient;*/
         var listRecipes = document.querySelectorAll(".recipeInList");
         listRecipes.forEach(function (recipeTile) {
-            /*var recipeTitle = recipeTile.querySelector(".hoverRecipeImage p").innerHTML;
-            arrayOfRecipes.forEach(function (recipe) {
-                if (recipe.title == recipeTitle) {
-                    recipe.ingredients.forEach(function (ingredientInList) {
-                        if (ingredientInList[0] == ingredient) {
-                            recipeTile.querySelector(".missingIngredients").appendChild(ingredientText.cloneNode(true));
-                            //recipeTile.style.order = ingredientsList.length;
-                            recipeTile.style.order = recipeTile.querySelectorAll(".missingIngredients p:missing").length;
-                        }
-                    });
-                }
-            });*/
             var ingredientsList = recipeTile.querySelectorAll(".missingIngredients>p.available");
             ingredientsList.forEach(function (ingredientInList) {
                 if (ingredient == ingredientInList.innerHTML) {
